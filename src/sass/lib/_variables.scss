@@ -1,0 +1,8 @@
+@include font-face('robotoRegular', "../fonts/robotoRegular" ,null, null, ttf eot woff svg);
+@include font-face('quicksandRegular', "../fonts/quicksandRegular" ,null, null, ttf eot woff svg);
+@include font-face('quicksandMedium', "../fonts/quicksandMedium" ,null, null, ttf eot woff svg);
+@include font-face('quicksandBold', "../fonts/quicksandBold" ,null, null, ttf eot woff svg);
+
+$dark: #333; 
+$gold: #aa9b77; 
+$light: #fff; 

@@ -1,0 +1,110 @@
+<!doctype html>
+<html ng-app="testTask">
+	<title>Главная</title>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="css/screen.css">
+	
+</head>
+
+<body>
+<header>
+  <div class="wrap">
+    <a href="/" class="logo"><img src="img/logo.png" alt=""></a>
+    <ul class="header_nav">
+    	<li><a href="#">Home</a></li>
+    	<li><a href="#">Products</a></li>
+    	<li><a href="#"><img src="img/icons/basket.png" alt=""></a></li>	
+    </ul>
+    <div class="slogan">
+    	<h1>Our clothing , your comfort</h1>
+    	<div class="slogan__descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore <br>magna aliqua.</div>
+    </div>
+    <div class="anchor"><a href="#products" data-href="#products" class="scrollto"><img src="../img/icons/arr_down.png" alt=""></a></div>
+  </div>
+</header>
+
+<main>
+	<div class="filters">
+		<div class="wrap">
+    	<div class="field">
+        <input type="checkbox" id="men">
+        <label for="men"><span></span>Men</label>
+      </div>
+      <div class="field">
+        <input type="checkbox" id="women">
+        <label for="women"><span></span>Women</label>
+      </div>
+      <div class="field">
+        <input type="checkbox" id="child">
+        <label for="child"><span></span>childRobotoren</label>
+      </div>
+      <a href="#" class="btn">see all prodRobotoucts</a>
+  	</div>
+	</div>
+  <div class="wrap">
+    <div id="products" class="product-block">
+    	<div class="product-block__item">
+    		<a href="#" class="product-block__item__wrap">
+    			<div class="product-block__size">size</div>
+    			<div class="product-block__img"><img src="img/products/prod1.png" alt=""></div>
+    			<div class="product-block__name">T-shirt</div>
+    			<div class="product-block__price">5,00€</div>
+    		</a>
+    	</div>
+    	<div class="product-block__item">
+    		<a href="#" class="product-block__item__wrap">
+    			<div class="product-block__size">size</div>
+    			<div class="product-block__img"><img src="img/products/prod2.png" alt=""></div>
+    			<div class="product-block__name">T-shirt</div>
+    			<div class="product-block__price">5,00€</div>
+    		</a>
+    	</div>
+    	<div class="product-block__item">
+    		<a href="#" class="product-block__item__wrap">
+    			<div class="product-block__size">size</div>
+    			<div class="product-block__img"><img src="img/products/prod3.png" alt=""></div>
+    			<div class="product-block__name">T-shirt</div>
+    			<div class="product-block__price">5,00€</div>
+    		</a>
+    	</div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="footer_top">
+  	<div class="wrap">
+  		<img class="icon_twitter" src="../img/icons/icon_twitter.png" alt="">
+  		<span>“ E-commerce psd theme available ”</span>
+  	</div>
+  </div>
+  <div class="footer_bottom">
+  	<div class="wrap">
+  		<div class="trekking">
+  			<div class="trekking__title">Trekking</div>
+  			<div class="trekking__caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+  		</div>
+  		<div class="right_block">
+  			<ul class="footer_nav" ng-click="$event.preventDefault()">
+  				<li><a href="#"  ng-repeat="footerMenu in footerMenu" ng-controller='menuCtrl' ng-model="name" ng-model="title" ng-model="link">{{footerMenu.name}}</a></li>
+<!--
+  				<li><a href="#" ng-controller='menuCtrl' ng-model="name" ng-model="title" ng-model="link">{{data}}</a></li>
+  				<li><a href="#" ng-controller='menuCtrl' ng-model="name" ng-model="title" ng-model="link">{{data}}</a></li>	
+  				<li><a href="#" ng-controller='menuCtrl' ng-model="name" ng-model="title" ng-model="link">{{data}}</a></li>	
+  				<li><a href="#" ng-controller='menuCtrl' ng-model="name" ng-model="title" ng-model="link">{{data}}</a></li>	
+-->
+  			</ul>
+  			<div class="gesign_by">Design by gianluca cosetta</div>
+  		</div>
+  	</div>
+  </div>
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.11/angular.min.js"></script>
+<script src="js/common.js"></script>
+</body>
+</html>

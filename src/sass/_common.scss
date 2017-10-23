@@ -1,0 +1,332 @@
+/* --- general styles --- */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  /* Sets up the Base 10 stuff 100%/1.6 */
+  height: 100%;
+}
+
+body {
+  background-color: #fff;
+  background-size: 50%;
+  color: #333;
+  font-family: 'robotoRegular', $font-stack-helvetica;
+  @include font-size(1.6);
+  font-smoothing: antialiased;
+  font-kerning: normal;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  font-weight: normal;
+}
+
+h1{
+	@include font-size(6.0);
+}
+
+a {
+  text-decoration: none;
+}
+
+.link {
+  
+}
+
+label {
+  text-transform: uppercase;
+	color: $dark;
+	@include font-size(1.8);
+}
+
+ul{
+	li{
+		list-style: none;
+	}
+}
+
+input[type=checkbox]{
+	position: absolute;
+	opacity: 0;
+	visibility: hidden;
+}
+
+input[type=checkbox]+label span{
+	display: inline-block;
+  vertical-align: middle;
+  width: 25px;
+  height: 25px;
+  margin-right: 17px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+	background-color: #fff;
+	position: relative;
+  transition: border-color .3s ease-out;
+}
+
+input[type=checkbox]+label{
+	&:hover span,
+	&:active span,
+	&:focus span{
+		border-color: $gold;
+	}
+}
+
+input[type=checkbox]:checked+label span{
+	border-color: $gold;
+	&::after{
+		content: '';
+		position: absolute;
+		background: url('../img/icons/check.png') center no-repeat;
+		height: 15px;
+		width: 15px;
+		top: 3px;
+		left: 3px;
+	}
+}
+
+p {
+  @include font-size(1.6);
+}
+
+.wrap {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.btn {
+	color: #fff;
+	@include font-size(1.4);
+	border-radius: 3px;
+	background-color: $gold;
+	padding: 16.5px 12px;
+	display: inline-block;
+  &:hover,
+  &:focus,
+  &:active {
+    
+  }
+}
+
+/* header */
+
+header{
+	background: url('../img/header_bg.jpg') center no-repeat;
+	background-size: cover;
+	height: 100vh;
+	min-height: 330px;
+	padding: 40px 0 80px;
+	position: relative;
+	.wrap{
+		height: 100%;
+	}
+}
+
+.header_nav{
+	float: right;
+	font-size: 0;
+	padding: 8px 0;
+	li{
+		display: inline-block;
+		vertical-align: middle;
+		margin-left: 55px;
+	}
+	a{
+		@include font-size(1.8);
+		color: #fff;
+	}
+}
+
+.slogan{
+	text-align: center;
+	color: #fff;
+	display: inline-block;
+	width: 100%;
+	vertical-align: middle;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.slogan__descr{
+	max-width: 570px;
+	@include font-size(2.0);
+	margin: 14px auto;
+}
+
+.anchor{
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 44px;
+	text-align: center;
+}
+
+/* footer */
+
+.footer_top{
+	background-color: #535253;
+	color: $light;
+	padding: 24px 0;
+	.icon_twitter{
+		vertical-align: middle;
+		margin-right: 18px;
+	}
+}
+
+.footer_bottom{
+	background-color: #424242;
+	color: $light;
+	font-size: 0;
+	padding: 104px 0 112px;
+	.right_block{
+		display: inline-block;
+		vertical-align: middle;
+		text-align: right;
+		width: 50%;
+		padding-left: 10px;
+	}
+}
+
+.trekking{
+	display: inline-block;
+	vertical-align: middle;
+	width: 50%;
+	padding-right: 10px;
+}
+
+.trekking__title{
+	text-transform: uppercase;
+	@include font-size(2.0);
+	padding-bottom: 12px;
+}
+
+.trekking__caption{
+	text-transform: uppercase;
+	@include font-size(1.0);
+	@include line-height(2.0);
+	max-width: 320px;
+}
+
+.footer_nav{
+	padding-right: 14px;
+	li{
+		display: inline-block; 
+		&:last-child a:after{
+			display: none;
+		}
+	}
+	a{
+		text-transform: uppercase;
+		@include font-size(1.4);
+		@include line-height(2.8);
+		color: #fff;
+		padding: 0 7px;
+		position: relative;
+		&:after{
+			content: '';
+			position: absolute;
+			top: 3px;
+			right: 0;
+			bottom: 3px;
+			border-left: 1px solid #7d745f;
+			border-right: 1px solid #94886b;
+		}
+	}
+}
+
+.gesign_by{
+	@include font-size(1.8);
+	@include line-height(2.8);
+	padding-right: 21px;
+}
+
+/* main */
+
+.filters{
+	background-color: #f5f6f7;
+	padding: 46px 0;
+	.field{
+		display: inline-block;
+		font-size: 0;
+		margin: 14px 7px 14px 32px;
+	}
+	.btn{
+		float: right;
+		margin-right: 32px;
+	}
+}
+
+.product-block{
+	font-size: 0;
+	margin: 48px 0 220px;
+}
+
+.product-block__item{
+	display: inline-block;
+	vertical-align: top;
+	width: 33.333%;
+	padding: 32px;
+}
+
+.product-block__item__wrap{
+	background-color: #f5f6f7;
+	padding: 24px;
+	display: inline-block;
+	width: 100%;
+	position: relative;
+	min-width: 225px;
+	transition: box-shadow .3s ease-out;
+	&:hover,
+	&:active,
+	&:focus{
+		border-radius: 3px;
+		box-shadow: inset 0 0 0 6px $gold;
+	}
+}
+
+.product-block__size{
+	@include font-size(1.6);
+	text-transform: uppercase;
+	padding-bottom: 30px;
+	color: $dark;
+}
+
+.product-block__img{
+	height: 240px;
+	display: flex;
+	margin-bottom: 17px;
+	img{
+		margin: auto;
+	}
+}
+
+.product-block__name{
+	@include font-size(1.8);
+	text-transform: uppercase;
+	color: $gold;
+	padding-right: 10px;
+	display: inline-block;
+}
+
+.product-block__price{
+	@include font-size(2.2);
+	text-transform: uppercase;
+	float: right;
+	color: $dark;
+}
